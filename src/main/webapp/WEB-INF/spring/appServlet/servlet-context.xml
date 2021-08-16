@@ -21,8 +21,10 @@
 		<beans:property name="suffix" value=".jsp" />
 	</beans:bean>
 	
-	<context:component-scan base-package="com.jhdev.iam" />
+	<context:component-scan base-package="org.onpups.controller" />
 	
+	<!-- multipartResolver  -->
+	<beans:bean id="multipartResolver" class="org.springframework.web.multipart.support.StandardServletMultipartResolver"></beans:bean>
 	
 	
 </beans:beans>

@@ -1,3 +1,5 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 
@@ -114,6 +116,7 @@
                           </div>
                       </div>
                       <a href="index.jsp">
+                     	 
                           <img class="img-fluid" src="resources/images/logo.png" alt="Theme-Logo" />
                       </a>
                       <a class="mobile-options waves-effect waves-light">
@@ -465,8 +468,8 @@
                               <div class="row align-items-center">
                                   <div class="col-md-8">
                                       <div class="page-header-title">
-                                          <h5 class="m-b-10">Dashboard</h5>
-                                          <p class="m-b-0">Welcome to Mega Able</p>
+                                          <h5 class="m-b-10"> ${zozo.num}</h5>
+                                          <p class="m-b-0">${zozo.cumd1}Welcome 한글이 깨진다 ??ㅇㄹ to Mega Able</p>
                                       </div>
                                   </div>
                                   <div class="col-md-4">

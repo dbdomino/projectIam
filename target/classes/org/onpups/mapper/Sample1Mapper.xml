@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.onpups.mapper.Sample1Mapper">
+	<select id="getList" resultType="org.onpups.domain.ZozoVO">
+		<![CDATA[select * from zozo where num > 0 order by num asc]]>
+	</select>
+	
+	<insert id="insertCol2">
+		insert into zozo (cumd1, cumd2, numd1)
+		values (#{cumd1}, #{cumd2}, #{numd1})
+	</insert>
+	
+	<select id="read" resultType="org.onpups.domain.ZozoVO">
+		select * from zozo where num = #{num}
+	</select>
+	
+</mapper>

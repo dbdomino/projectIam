@@ -36,7 +36,7 @@
       });
 
       // double click to remove
-      $(document).on('dblclick', 'li', function() {
+      $(document).on('dblclick', '.card li', function() {
           $(this).remove();
       });
 

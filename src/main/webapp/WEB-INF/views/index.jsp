@@ -1,524 +1,68 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<!DOCTYPE html>
-<html>
+<%@include file="./include/header.jsp" %>
+<%@include file="./include/sidebar.jsp" %>   
 
-<head>
-    <title>Mega Able bootstrap admin template by codedthemes </title>
-    <!-- HTML5 Shim and Respond.js IE10 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 10]>
-      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-      <![endif]-->
-      <!-- Meta -->
-      <meta charset="utf-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
-      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-      <meta name="description" content="Mega Able Bootstrap admin template made using Bootstrap 4 and it has huge amount of ready made feature, UI components, pages which completely fulfills any dashboard needs." />
-      <meta name="keywords" content="bootstrap, bootstrap admin template, admin theme, admin dashboard, dashboard template, admin template, responsive" />
-      <meta name="author" content="codedthemes" />
-      <!-- Favicon icon -->
-      <link rel="icon" href="resources/images/favicon.ico" type="image/x-icon">
-    <!-- Google font-->
-    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500" rel="stylesheet">
-    <!-- waves.css -->
-    <link rel="stylesheet" href="resources/pages/waves/css/waves.min.css" type="text/css" media="all">
-      <!-- Required Fremwork -->
-      <link rel="stylesheet" type="text/css" href="resources/css/bootstrap/css/bootstrap.min.css">
-      <!-- waves.css -->
-      <link rel="stylesheet" href="resources/pages/waves/css/waves.min.css" type="text/css" media="all">
-      <!-- themify icon -->
-      <link rel="stylesheet" type="text/css" href="resources/icon/themify-icons/themify-icons.css">
-      <!-- Font Awesome -->
-      <link rel="stylesheet" type="text/css" href="resources/icon/font-awesome/css/font-awesome.min.css">
-      <!-- scrollbar.css -->
-      <link rel="stylesheet" type="text/css" href="resources/css/jquery.mCustomScrollbar.css">
-        <!-- am chart export.css -->
-        <link rel="stylesheet" href="https://www.amcharts.com/lib/3/plugins/export/export.css" type="text/css" media="all" />
-      <!-- Style.css -->
-      <link rel="stylesheet" type="text/css" href="resources/css/style.css">
-  </head>
+   
+<div class="pcoded-content">
+<!-- Page-header start -->
+	<div class="page-header">
+		<div class="page-block">
+			<div class="row align-items-center">
+				<div class="col-md-8">
+					<div class="page-header-title">
+						<h5 class="m-b-10">Dashboard</h5>
+						<p class="m-b-0">Welcome to Mega Able</p>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<ul class="breadcrumb">
+						<li class="breadcrumb-item">
+							<a href="index.html"> <i class="fa fa-home"></i> </a>
+						</li>
+						<li class="breadcrumb-item"><a href="#!">Dashboard</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+<!-- Page-header end -->
+<!-- pcoded-inner-content start -->
+<div class="pcoded-inner-content">
+<!-- Main-body start -->
+<div class="main-body">
+<div class="page-wrapper">
+<!-- Page-body start -->
+<div class="page-body">
+<!-- Row start -->
+<div class="row">
 
-  <body>
-  <!-- Pre-loader start -->
-  <div class="theme-loader">
-      <div class="loader-track">
-          <div class="preloader-wrapper">
-              <div class="spinner-layer spinner-blue">
-                  <div class="circle-clipper left">
-                      <div class="circle"></div>
-                  </div>
-                  <div class="gap-patch">
-                      <div class="circle"></div>
-                  </div>
-                  <div class="circle-clipper right">
-                      <div class="circle"></div>
-                  </div>
-              </div>
-              <div class="spinner-layer spinner-red">
-                  <div class="circle-clipper left">
-                      <div class="circle"></div>
-                  </div>
-                  <div class="gap-patch">
-                      <div class="circle"></div>
-                  </div>
-                  <div class="circle-clipper right">
-                      <div class="circle"></div>
-                  </div>
-              </div>
-            
-              <div class="spinner-layer spinner-yellow">
-                  <div class="circle-clipper left">
-                      <div class="circle"></div>
-                  </div>
-                  <div class="gap-patch">
-                      <div class="circle"></div>
-                  </div>
-                  <div class="circle-clipper right">
-                      <div class="circle"></div>
-                  </div>
-              </div>
-            
-              <div class="spinner-layer spinner-green">
-                  <div class="circle-clipper left">
-                      <div class="circle"></div>
-                  </div>
-                  <div class="gap-patch">
-                      <div class="circle"></div>
-                  </div>
-                  <div class="circle-clipper right">
-                      <div class="circle"></div>
-                  </div>
-              </div>
-          </div>
-      </div>
-  </div>
-  <!-- Pre-loader end -->
-  <div id="pcoded" class="pcoded">
-      <div class="pcoded-overlay-box"></div>
-      <div class="pcoded-container navbar-wrapper">
-          <nav class="navbar header-navbar pcoded-header">
-              <div class="navbar-wrapper">
-                  <div class="navbar-logo">
-                      <a class="mobile-menu waves-effect waves-light" id="mobile-collapse" href="#!">
-                          <i class="ti-menu"></i>
-                      </a>
-                      <div class="mobile-search waves-effect waves-light">
-                          <div class="header-search">
-                              <div class="main-search morphsearch-search">
-                                  <div class="input-group">
-                                      <span class="input-group-addon search-close"><i class="ti-close"></i></span>
-                                      <input type="text" class="form-control" placeholder="Enter Keyword">
-                                      <span class="input-group-addon search-btn"><i class="ti-search"></i></span>
-                                  </div>
-                              </div>
-                          </div>
-                      </div>
-                      <a href="index.jsp">
-                     	 
-                          <img class="img-fluid" src="resources/images/logo.png" alt="Theme-Logo" />
-                      </a>
-                      <a class="mobile-options waves-effect waves-light">
-                          <i class="ti-more"></i>
-                      </a>
-                  </div>
-                
-                  <div class="navbar-container container-fluid">
-                      <ul class="nav-left">
-                          <li>
-                              <div class="sidebar_toggle"><a href="javascript:void(0)"><i class="ti-menu"></i></a></div>
-                          </li>
-                          <li class="header-search">
-                              <div class="main-search morphsearch-search">
-                                  <div class="input-group">
-                                      <span class="input-group-addon search-close"><i class="ti-close"></i></span>
-                                      <input type="text" class="form-control">
-                                      <span class="input-group-addon search-btn"><i class="ti-search"></i></span>
-                                  </div>
-                              </div>
-                          </li>
-                          <li>
-                              <a href="#!" onclick="javascript:toggleFullScreen()" class="waves-effect waves-light">
-                                  <i class="ti-fullscreen"></i>
-                              </a>
-                          </li>
-                      </ul>
-                      <ul class="nav-right">
-                          <li class="header-notification">
-                              <a href="#!" class="waves-effect waves-light">
-                                  <i class="ti-bell"></i>
-                                  <span class="badge bg-c-red"></span>
-                              </a>
-                              <ul class="show-notification">
-                                  <li>
-                                      <h6>Notifications</h6>
-                                      <label class="label label-danger">New</label>
-                                  </li>
-                                  <li class="waves-effect waves-light">
-                                      <div class="media">
-                                          <img class="d-flex align-self-center img-radius" src="resources/images/avatar-2.jpg" alt="Generic placeholder image">
-                                          <div class="media-body">
-                                              <h5 class="notification-user">John Doe</h5>
-                                              <p class="notification-msg">Lorem ipsum dolor sit amet, consectetuer elit.</p>
-                                              <span class="notification-time">30 minutes ago</span>
-                                          </div>
-                                      </div>
-                                  </li>
-                                  <li class="waves-effect waves-light">
-                                      <div class="media">
-                                          <img class="d-flex align-self-center img-radius" src="resources/images/avatar-4.jpg" alt="Generic placeholder image">
-                                          <div class="media-body">
-                                              <h5 class="notification-user">Joseph William</h5>
-                                              <p class="notification-msg">Lorem ipsum dolor sit amet, consectetuer elit.</p>
-                                              <span class="notification-time">30 minutes ago</span>
-                                          </div>
-                                      </div>
-                                  </li>
-                                  <li class="waves-effect waves-light">
-                                      <div class="media">
-                                          <img class="d-flex align-self-center img-radius" src="resources/images/avatar-3.jpg" alt="Generic placeholder image">
-                                          <div class="media-body">
-                                              <h5 class="notification-user">Sara Soudein</h5>
-                                              <p class="notification-msg">Lorem ipsum dolor sit amet, consectetuer elit.</p>
-                                              <span class="notification-time">30 minutes ago</span>
-                                          </div>
-                                      </div>
-                                  </li>
-                              </ul>
-                          </li>
-                          <li class="user-profile header-notification">
-                              <a href="#!" class="waves-effect waves-light">
-                                  <img src="resources/images/avatar-4.jpg" class="img-radius" alt="User-Profile-Image">
-                                  <span>John Doe</span>
-                                  <i class="ti-angle-down"></i>
-                              </a>
-                              <ul class="show-notification profile-notification">
-                                  <li class="waves-effect waves-light">
-                                      <a href="#!">
-                                          <i class="ti-settings"></i> Settings
-                                      </a>
-                                  </li>
-                                  <li class="waves-effect waves-light">
-                                      <a href="user-profile.jsp">
-                                          <i class="ti-user"></i> Profile
-                                      </a>
-                                  </li>
-                                  <li class="waves-effect waves-light">
-                                      <a href="email-inbox.jsp">
-                                          <i class="ti-email"></i> My Messages
-                                      </a>
-                                  </li>
-                                  <li class="waves-effect waves-light">
-                                      <a href="auth-lock-screen.jsp">
-                                          <i class="ti-lock"></i> Lock Screen
-                                      </a>
-                                  </li>
-                                  <li class="waves-effect waves-light">
-                                      <a href="auth-normal-sign-in.jsp">
-                                          <i class="ti-layout-sidebar-left"></i> Logout
-                                      </a>
-                                  </li>
-                              </ul>
-                          </li>
-                      </ul>
-                  </div>
-              </div>
-          </nav>
-
-          <div class="pcoded-main-container">
-              <div class="pcoded-wrapper">
-                  <nav class="pcoded-navbar">
-                      <div class="sidebar_toggle"><a href="#"><i class="icon-close icons"></i></a></div>
-                      <div class="pcoded-inner-navbar main-menu">
-                          <div class="">
-                              <div class="main-menu-header">
-                                  <img class="img-80 img-radius" src="resources/images/avatar-4.jpg" alt="User-Profile-Image">
-                                  <div class="user-details">
-                                      <span id="more-details">John Doe<i class="fa fa-caret-down"></i></span>
-                                  </div>
-                              </div>
-        
-                              <div class="main-menu-content">
-                                  <ul>
-                                      <li class="more-details">
-                                          <a href="user-profile.jsp"><i class="ti-user"></i>View Profile</a>
-                                          <a href="#!"><i class="ti-settings"></i>Settings</a>
-                                          <a href="auth-normal-sign-in.jsp"><i class="ti-layout-sidebar-left"></i>Logout</a>
-                                      </li>
-                                  </ul>
-                              </div>
-                          </div>
-                          <div class="p-15 p-b-0">
-                              <form class="form-material">
-                                  <div class="form-group form-primary">
-                                      <input type="text" name="footer-email" class="form-control" required="">
-                                      <span class="form-bar"></span>
-                                      <label class="float-label"><i class="fa fa-search m-r-10"></i>Search Friend</label>
-                                  </div>
-                              </form>
-                          </div>
-                          <div class="pcoded-navigation-label" data-i18n="nav.category.navigation">Layout</div>
-                          <ul class="pcoded-item pcoded-left-item">
-                              <li class="active">
-                                  <a href="index.jsp" class="waves-effect waves-dark">
-                                      <span class="pcoded-micon"><i class="ti-home"></i><b>D</b></span>
-                                      <span class="pcoded-mtext" data-i18n="nav.dash.main">Dashboard</span>
-                                      <span class="pcoded-mcaret"></span>
-                                  </a>
-                              </li>
-                              <li class="pcoded-hasmenu">
-                                  <a href="javascript:void(0)" class="waves-effect waves-dark">
-                                      <span class="pcoded-micon"><i class="ti-layout-grid2-alt"></i></span>
-                                      <span class="pcoded-mtext"  data-i18n="nav.basic-components.main">Components</span>
-                                      <span class="pcoded-mcaret"></span>
-                                  </a>
-                                  <ul class="pcoded-submenu">
-                                      <li class=" ">
-                                          <a href="accordion.jsp" class="waves-effect waves-dark">
-                                              <span class="pcoded-micon"><i class="ti-angle-right"></i></span>
-                                              <span class="pcoded-mtext" data-i18n="nav.basic-components.alert">Accordion</span>
-                                              <span class="pcoded-mcaret"></span>
-                                          </a>
-                                      </li>
-                                      <li class=" ">
-                                          <a href="breadcrumb.jsp" class="waves-effect waves-dark">
-                                              <span class="pcoded-micon"><i class="ti-angle-right"></i></span>
-                                              <span class="pcoded-mtext" data-i18n="nav.basic-components.breadcrumbs">Breadcrumbs</span>
-                                              <span class="pcoded-mcaret"></span>
-                                          </a>
-                                      </li>
-                                      <li class=" ">
-                                          <a href="button.jsp" class="waves-effect waves-dark">
-                                              <span class="pcoded-micon"><i class="ti-angle-right"></i></span>
-                                              <span class="pcoded-mtext" data-i18n="nav.basic-components.alert">Button</span>
-                                              <span class="pcoded-mcaret"></span>
-                                          </a>
-                                      </li>
-                                      <li class=" ">
-                                          <a href="tabs.jsp" class="waves-effect waves-dark">
-                                              <span class="pcoded-micon"><i class="ti-angle-right"></i></span>
-                                              <span class="pcoded-mtext" data-i18n="nav.basic-components.breadcrumbs">Tabs</span>
-                                              <span class="pcoded-mcaret"></span>
-                                          </a>
-                                      </li>
-                                      <li class=" ">
-                                          <a href="color.jsp" class="waves-effect waves-dark">
-                                              <span class="pcoded-micon"><i class="ti-angle-right"></i></span>
-                                              <span class="pcoded-mtext" data-i18n="nav.basic-components.alert">Color</span>
-                                              <span class="pcoded-mcaret"></span>
-                                          </a>
-                                      </li>
-                                      <li class=" ">
-                                          <a href="label-badge.jsp" class="waves-effect waves-dark">
-                                              <span class="pcoded-micon"><i class="ti-angle-right"></i></span>
-                                              <span class="pcoded-mtext" data-i18n="nav.basic-components.breadcrumbs">Label Badge</span>
-                                              <span class="pcoded-mcaret"></span>
-                                          </a>
-                                      </li>
-                                      <li class=" ">
-                                          <a href="tooltip.jsp" class="waves-effect waves-dark">
-                                              <span class="pcoded-micon"><i class="ti-angle-right"></i></span>
-                                              <span class="pcoded-mtext" data-i18n="nav.basic-components.alert">Tooltip</span>
-                                              <span class="pcoded-mcaret"></span>
-                                          </a>
-                                      </li>
-                                      <li class=" ">
-                                          <a href="typography.jsp" class="waves-effect waves-dark">
-                                              <span class="pcoded-micon"><i class="ti-angle-right"></i></span>
-                                              <span class="pcoded-mtext" data-i18n="nav.basic-components.breadcrumbs">Typography</span>
-                                              <span class="pcoded-mcaret"></span>
-                                          </a>
-                                      </li>
-                                      <li class=" ">
-                                          <a href="notification.jsp" class="waves-effect waves-dark">
-                                              <span class="pcoded-micon"><i class="ti-angle-right"></i></span>
-                                              <span class="pcoded-mtext" data-i18n="nav.basic-components.alert">Notification</span>
-                                              <span class="pcoded-mcaret"></span>
-                                          </a>
-                                      </li>
-                                      <li class=" ">
-                                          <a href="icon-themify.jsp" class="waves-effect waves-dark">
-                                              <span class="pcoded-micon"><i class="ti-angle-right"></i></span>
-                                              <span class="pcoded-mtext" data-i18n="nav.basic-components.breadcrumbs">Themify</span>
-                                              <span class="pcoded-mcaret"></span>
-                                          </a>
-                                      </li>
-                
-                                  </ul>
-                              </li>
-                          </ul>
-                          <div class="pcoded-navigation-label" data-i18n="nav.category.forms">Forms &amp; Tables</div>
-                          <ul class="pcoded-item pcoded-left-item">
-                              <li>
-                                  <a href="form-elements-component.jsp" class="waves-effect waves-dark">
-                                      <span class="pcoded-micon"><i class="ti-layers"></i><b>FC</b></span>
-                                      <span class="pcoded-mtext" data-i18n="nav.form-components.main">Form Components</span>
-                                      <span class="pcoded-mcaret"></span>
-                                  </a>
-                              </li>
-                              <li>
-                                  <a href="bs-basic-table.jsp" class="waves-effect waves-dark">
-                                      <span class="pcoded-micon"><i class="ti-layers"></i><b>FC</b></span>
-                                      <span class="pcoded-mtext" data-i18n="nav.form-components.main">Basic Table</span>
-                                      <span class="pcoded-mcaret"></span>
-                                  </a>
-                              </li>
-        
-                          </ul>
-        
-                          <div class="pcoded-navigation-label" data-i18n="nav.category.forms">Chart &amp; Maps</div>
-                          <ul class="pcoded-item pcoded-left-item">
-                              <li>
-                                  <a href="chart.jsp" class="waves-effect waves-dark">
-                                      <span class="pcoded-micon"><i class="ti-layers"></i><b>FC</b></span>
-                                      <span class="pcoded-mtext" data-i18n="nav.form-components.main">Chart</span>
-                                      <span class="pcoded-mcaret"></span>
-                                  </a>
-                              </li>
-                              <li>
-                                  <a href="map-google.jsp" class="waves-effect waves-dark">
-                                      <span class="pcoded-micon"><i class="ti-layers"></i><b>FC</b></span>
-                                      <span class="pcoded-mtext" data-i18n="nav.form-components.main">Maps</span>
-                                      <span class="pcoded-mcaret"></span>
-                                  </a>
-                              </li>
-                              <li class="pcoded-hasmenu">
-                                  <a href="javascript:void(0)" class="waves-effect waves-dark">
-                                      <span class="pcoded-micon"><i class="ti-layout-grid2-alt"></i></span>
-                                      <span class="pcoded-mtext"  data-i18n="nav.basic-components.main">Pages</span>
-                                      <span class="pcoded-mcaret"></span>
-                                  </a>
-                                  <ul class="pcoded-submenu">
-                                      <li class=" ">
-                                          <a href="auth-normal-sign-in.jsp" class="waves-effect waves-dark">
-                                              <span class="pcoded-micon"><i class="ti-angle-right"></i></span>
-                                              <span class="pcoded-mtext" data-i18n="nav.basic-components.alert">Login</span>
-                                              <span class="pcoded-mcaret"></span>
-                                          </a>
-                                      </li>
-                                      <li class=" ">
-                                          <a href="auth-sign-up.jsp" class="waves-effect waves-dark">
-                                              <span class="pcoded-micon"><i class="ti-angle-right"></i></span>
-                                              <span class="pcoded-mtext" data-i18n="nav.basic-components.breadcrumbs">Register</span>
-                                              <span class="pcoded-mcaret"></span>
-                                          </a>
-                                      </li>
-                                      <li class=" ">
-                                          <a href="sample-page.jsp" class="waves-effect waves-dark">
-                                              <span class="pcoded-micon"><i class="ti-angle-right"></i></span>
-                                              <span class="pcoded-mtext" data-i18n="nav.basic-components.breadcrumbs">Sample Page</span>
-                                              <span class="pcoded-mcaret"></span>
-                                          </a>
-                                      </li>
-                                  </ul>
-                              </li>
-        
-                          </ul>
-        
-                          <div class="pcoded-navigation-label" data-i18n="nav.category.other">Other</div>
-                          <ul class="pcoded-item pcoded-left-item">
-                              <li class="pcoded-hasmenu ">
-                                  <a href="javascript:void(0)" class="waves-effect waves-dark">
-                                      <span class="pcoded-micon"><i class="ti-direction-alt"></i><b>M</b></span>
-                                      <span class="pcoded-mtext" data-i18n="nav.menu-levels.main">Menu Levels</span>
-                                      <span class="pcoded-mcaret"></span>
-                                  </a>
-                                  <ul class="pcoded-submenu">
-                                      <li class="">
-                                          <a href="javascript:void(0)" class="waves-effect waves-dark">
-                                              <span class="pcoded-micon"><i class="ti-angle-right"></i></span>
-                                              <span class="pcoded-mtext" data-i18n="nav.menu-levels.menu-level-21">Menu Level 2.1</span>
-                                              <span class="pcoded-mcaret"></span>
-                                          </a>
-                                      </li>
-                                      <li class="pcoded-hasmenu ">
-                                          <a href="javascript:void(0)" class="waves-effect waves-dark">
-                                              <span class="pcoded-micon"><i class="ti-direction-alt"></i></span>
-                                              <span class="pcoded-mtext" data-i18n="nav.menu-levels.menu-level-22.main">Menu Level 2.2</span>
-                                              <span class="pcoded-mcaret"></span>
-                                          </a>
-                                          <ul class="pcoded-submenu">
-                                              <li class="">
-                                                  <a href="javascript:void(0)" class="waves-effect waves-dark">
-                                                      <span class="pcoded-micon"><i class="ti-angle-right"></i></span>
-                                                      <span class="pcoded-mtext" data-i18n="nav.menu-levels.menu-level-22.menu-level-31">Menu Level 3.1</span>
-                                                      <span class="pcoded-mcaret"></span>
-                                                  </a>
-                                              </li>
-                                          </ul>
-                                      </li>
-                                      <li class="">
-                                          <a href="javascript:void(0)" class="waves-effect waves-dark">
-                                              <span class="pcoded-micon"><i class="ti-angle-right"></i></span>
-                                              <span class="pcoded-mtext" data-i18n="nav.menu-levels.menu-level-23">Menu Level 2.3</span>
-                                              <span class="pcoded-mcaret"></span>
-                                          </a>
-                                      </li>
-                
-                                  </ul>
-                              </li>
-                          </ul>
-                      </div>
-                  </nav>
-                  <div class="pcoded-content">
-                      <!-- Page-header start -->
-                      <div class="page-header">
-                          <div class="page-block">
-                              <div class="row align-items-center">
-                                  <div class="col-md-8">
-                                      <div class="page-header-title">
-                                          <h5 class="m-b-10"> ${zozo.num}</h5>
-                                          <p class="m-b-0">${zozo.cumd1}Welcome 한글이 깨진다 ??ㅇㄹ to Mega Able</p>
-                                      </div>
-                                  </div>
-                                  <div class="col-md-4">
-                                      <ul class="breadcrumb-title">
-                                          <li class="breadcrumb-item">
-                                              <a href="index.jsp"> <i class="fa fa-home"></i> </a>
-                                          </li>
-                                          <li class="breadcrumb-item"><a href="#!">Dashboard</a>
-                                          </li>
-                                      </ul>
-                                  </div>
-                              </div>
-                          </div>
-                      </div>
-                      <!-- Page-header end -->
-                        <div class="pcoded-inner-content">
-                            <!-- Main-body start -->
-                            <div class="main-body">
-                                <div class="page-wrapper">
-                                    <!-- Page-body start -->
-                                    <div class="page-body">
-                                        <div class="row">
-                                            <!-- task, page, download counter  start -->
-                                            <div class="col-xl-3 col-md-6">
-                                                <div class="card">
-                                                    <div class="card-block">
-                                                        <div class="row align-items-center">
-                                                            <div class="col-8">
-                                                                <h4 class="text-c-purple">$30200</h4>
-                                                                <h6 class="text-muted m-b-0">All Earnings</h6>
-                                                            </div>
-                                                            <div class="col-4 text-right">
-                                                                <i class="fa fa-bar-chart f-28"></i>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="card-footer bg-c-purple">
-                                                        <div class="row align-items-center">
-                                                            <div class="col-9">
-                                                                <p class="text-white m-b-0">% change</p>
-                                                            </div>
-                                                            <div class="col-3 text-right">
-                                                                <i class="fa fa-line-chart text-white f-16"></i>
-                                                            </div>
-                                                        </div>
-            
-                                                    </div>
-                                                </div>
-                                            </div>
+	<div class="col-xl-3 col-md-6">
+		<div class="card">
+			<div class="card-block">
+				<div class="row align-items-center">
+					<div class="col-8">
+						<h4 class="text-c-purple">$30200</h4>
+						<h6 class="text-muted m-b-0">All Earnings</h6>
+                    </div>
+					<div class="col-4 text-right">
+						<i class="fa fa-bar-chart f-28"></i>
+					</div>
+				</div>
+			</div>
+			<div class="card-footer bg-c-purple">
+				<div class="row align-items-center">
+					<div class="col-9">
+						<p class="text-white m-b-0">% change</p>
+					</div>
+					<div class="col-3 text-right">
+						<i class="fa fa-line-chart text-white f-16"></i>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
                                             <div class="col-xl-3 col-md-6">
                                                 <div class="card">
                                                     <div class="card-block">
@@ -595,13 +139,13 @@
                                                 </div>
                                             </div>
                                             <!-- task, page, download counter  end -->
-    
+
                                             <!--  sale analytics start -->
                                             <div class="col-xl-8 col-md-12">
                                                 <div class="card">
                                                     <div class="card-header">
                                                         <h5>Sales Analytics</h5>
-                                                        <span class="text-muted">Get 15% Off on <a href="https://www.amcharts.com/" target="_blank">amCharts</a> licences. Use code "codedthemes" and get the discount.</span>
+                                                        <span class="text-muted">Get 15% Off on <a href="https://www.amcharts.com/" target="_blank">amCharts</a> licences. Use code "Phoenixcoded" and get the discount.</span>
                                                         <div class="card-header-right">
                                                             <ul class="list-unstyled card-option">
                                                                 <li><i class="fa fa fa-wrench open-card-option"></i></li>
@@ -643,15 +187,19 @@
                                                         <p class="text-muted">$3,9452.50</p>
                                                         <h5>87</h5>
                                                         <p class="text-muted">Online Revenue<span class="f-right">80%</span></p>
-                                                        <div class="progress"><div class="progress-bar bg-c-blue" style="width: 80%"></div></div>
+                                                        <div class="progress">
+                                                            <div class="progress-bar bg-c-blue" style="width: 80%"></div>
+                                                        </div>
                                                         <h5 class="m-t-15">68</h5>
                                                         <p class="text-muted">Offline Revenue<span class="f-right">50%</span></p>
-                                                        <div class="progress"><div class="progress-bar bg-c-green" style="width: 50%"></div></div>
+                                                        <div class="progress">
+                                                            <div class="progress-bar bg-c-green" style="width: 50%"></div>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
                                             <!--  sale analytics end -->
-    
+
                                             <!--  project and team member start -->
                                             <div class="col-xl-8 col-md-12">
                                                 <div class="card table-card">
@@ -671,121 +219,121 @@
                                                         <div class="table-responsive">
                                                             <table class="table table-hover">
                                                                 <thead>
-                                                                <tr>
-                                                                    <th>
-                                                                        <div class="chk-option">
-                                                                            <div class="checkbox-fade fade-in-primary">
-                                                                                <label class="check-task">
-                                                                                    <input type="checkbox" value="">
-                                                                                    <span class="cr">
-                                                                                            <i class="cr-icon fa fa-check txt-default"></i>
-                                                                                        </span>
-                                                                                </label>
+                                                                    <tr>
+                                                                        <th>
+                                                                            <div class="chk-option">
+                                                                                <div class="checkbox-fade fade-in-primary">
+                                                                                    <label class="check-task">
+                                                <input type="checkbox" value="">
+                                                <span class="cr">
+                                                  <i class="cr-icon fa fa-check txt-default"></i>
+                                                </span>
+                                              </label>
+                                                                                </div>
                                                                             </div>
-                                                                        </div>
-                                                                        Assigned</th>
-                                                                    <th>Name</th>
-                                                                    <th>Due Date</th>
-                                                                    <th class="text-right">Priority</th>
-                                                                </tr>
+                                                                            Assigned</th>
+                                                                        <th>Name</th>
+                                                                        <th>Due Date</th>
+                                                                        <th class="text-right">Priority</th>
+                                                                    </tr>
                                                                 </thead>
                                                                 <tbody>
-                                                                <tr>
-                                                                    <td>
-                                                                        <div class="chk-option">
-                                                                            <div class="checkbox-fade fade-in-primary">
-                                                                                <label class="check-task">
-                                                                                    <input type="checkbox" value="">
-                                                                                    <span class="cr">
-                                                                                                <i class="cr-icon fa fa-check txt-default"></i>
-                                                                                            </span>
-                                                                                </label>
+                                                                    <tr>
+                                                                        <td>
+                                                                            <div class="chk-option">
+                                                                                <div class="checkbox-fade fade-in-primary">
+                                                                                    <label class="check-task">
+                                                  <input type="checkbox" value="">
+                                                  <span class="cr">
+                                                    <i class="cr-icon fa fa-check txt-default"></i>
+                                                  </span>
+                                                </label>
+                                                                                </div>
                                                                             </div>
-                                                                        </div>
-                                                                        <div class="d-inline-block align-middle">
-                                                                            <img src="resources/images/avatar-4.jpg" alt="user image" class="img-radius img-40 align-top m-r-15">
-                                                                            <div class="d-inline-block">
-                                                                                <h6>John Deo</h6>
-                                                                                <p class="text-muted m-b-0">Graphics Designer</p>
+                                                                            <div class="d-inline-block align-middle">
+                                                                                <img src="/resources/images/avatar-4.jpg" alt="user image" class="img-radius img-40 align-top m-r-15">
+                                                                                <div class="d-inline-block">
+                                                                                    <h6>John Deo</h6>
+                                                                                    <p class="text-muted m-b-0">Graphics Designer</p>
+                                                                                </div>
                                                                             </div>
-                                                                        </div>
-                                                                    </td>
-                                                                    <td>Able Pro</td>
-                                                                    <td>Jun, 26</td>
-                                                                    <td class="text-right"><label class="label label-danger">Low</label></td>
-                                                                </tr>
-                                                                <tr>
-                                                                    <td>
-                                                                        <div class="chk-option">
-                                                                            <div class="checkbox-fade fade-in-primary">
-                                                                                <label class="check-task">
-                                                                                    <input type="checkbox" value="">
-                                                                                    <span class="cr">
-                                                                                                <i class="cr-icon fa fa-check txt-default"></i>
-                                                                                            </span>
-                                                                                </label>
+                                                                        </td>
+                                                                        <td>Able Pro</td>
+                                                                        <td>Jun, 26</td>
+                                                                        <td class="text-right"><label class="label label-danger">Low</label></td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>
+                                                                            <div class="chk-option">
+                                                                                <div class="checkbox-fade fade-in-primary">
+                                                                                    <label class="check-task">
+                                                  <input type="checkbox" value="">
+                                                  <span class="cr">
+                                                    <i class="cr-icon fa fa-check txt-default"></i>
+                                                  </span>
+                                                </label>
+                                                                                </div>
                                                                             </div>
-                                                                        </div>
-                                                                        <div class="d-inline-block align-middle">
-                                                                            <img src="resources/images/avatar-5.jpg" alt="user image" class="img-radius img-40 align-top m-r-15">
-                                                                            <div class="d-inline-block">
-                                                                                <h6>Jenifer Vintage</h6>
-                                                                                <p class="text-muted m-b-0">Web Designer</p>
+                                                                            <div class="d-inline-block align-middle">
+                                                                                <img src="/resources/images/avatar-5.jpg" alt="user image" class="img-radius img-40 align-top m-r-15">
+                                                                                <div class="d-inline-block">
+                                                                                    <h6>Jenifer Vintage</h6>
+                                                                                    <p class="text-muted m-b-0">Web Designer</p>
+                                                                                </div>
                                                                             </div>
-                                                                        </div>
-                                                                    </td>
-                                                                    <td>Mashable</td>
-                                                                    <td>March, 31</td>
-                                                                    <td class="text-right"><label class="label label-primary">high</label></td>
-                                                                </tr>
-                                                                <tr>
-                                                                    <td>
-                                                                        <div class="chk-option">
-                                                                            <div class="checkbox-fade fade-in-primary">
-                                                                                <label class="check-task">
-                                                                                    <input type="checkbox" value="">
-                                                                                    <span class="cr">
-                                                                                                <i class="cr-icon fa fa-check txt-default"></i>
-                                                                                            </span>
-                                                                                </label>
+                                                                        </td>
+                                                                        <td>Mashable</td>
+                                                                        <td>March, 31</td>
+                                                                        <td class="text-right"><label class="label label-primary">high</label></td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>
+                                                                            <div class="chk-option">
+                                                                                <div class="checkbox-fade fade-in-primary">
+                                                                                    <label class="check-task">
+                                                  <input type="checkbox" value="">
+                                                  <span class="cr">
+                                                    <i class="cr-icon fa fa-check txt-default"></i>
+                                                  </span>
+                                                </label>
+                                                                                </div>
                                                                             </div>
-                                                                        </div>
-                                                                        <div class="d-inline-block align-middle">
-                                                                            <img src="resources/images/avatar-3.jpg" alt="user image" class="img-radius img-40 align-top m-r-15">
-                                                                            <div class="d-inline-block">
-                                                                                <h6>William Jem</h6>
-                                                                                <p class="text-muted m-b-0">Developer</p>
+                                                                            <div class="d-inline-block align-middle">
+                                                                                <img src="/resources/images/avatar-3.jpg" alt="user image" class="img-radius img-40 align-top m-r-15">
+                                                                                <div class="d-inline-block">
+                                                                                    <h6>William Jem</h6>
+                                                                                    <p class="text-muted m-b-0">Developer</p>
+                                                                                </div>
                                                                             </div>
-                                                                        </div>
-                                                                    </td>
-                                                                    <td>Flatable</td>
-                                                                    <td>Aug, 02</td>
-                                                                    <td class="text-right"><label class="label label-success">medium</label></td>
-                                                                </tr>
-                                                                <tr>
-                                                                    <td>
-                                                                        <div class="chk-option">
-                                                                            <div class="checkbox-fade fade-in-primary">
-                                                                                <label class="check-task">
-                                                                                    <input type="checkbox" value="">
-                                                                                    <span class="cr">
-                                                                                                <i class="cr-icon fa fa-check txt-default"></i>
-                                                                                            </span>
-                                                                                </label>
+                                                                        </td>
+                                                                        <td>Flatable</td>
+                                                                        <td>Aug, 02</td>
+                                                                        <td class="text-right"><label class="label label-success">medium</label></td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>
+                                                                            <div class="chk-option">
+                                                                                <div class="checkbox-fade fade-in-primary">
+                                                                                    <label class="check-task">
+                                                  <input type="checkbox" value="">
+                                                  <span class="cr">
+                                                    <i class="cr-icon fa fa-check txt-default"></i>
+                                                  </span>
+                                                </label>
+                                                                                </div>
                                                                             </div>
-                                                                        </div>
-                                                                        <div class="d-inline-block align-middle">
-                                                                            <img src="resources/images/avatar-2.jpg" alt="user image" class="img-radius img-40 align-top m-r-15">
-                                                                            <div class="d-inline-block">
-                                                                                <h6>David Jones</h6>
-                                                                                <p class="text-muted m-b-0">Developer</p>
+                                                                            <div class="d-inline-block align-middle">
+                                                                                <img src="/resources/images/avatar-2.jpg" alt="user image" class="img-radius img-40 align-top m-r-15">
+                                                                                <div class="d-inline-block">
+                                                                                    <h6>David Jones</h6>
+                                                                                    <p class="text-muted m-b-0">Developer</p>
+                                                                                </div>
                                                                             </div>
-                                                                        </div>
-                                                                    </td>
-                                                                    <td>Guruable</td>
-                                                                    <td>Sep, 22</td>
-                                                                    <td class="text-right"><label class="label label-primary">high</label></td>
-                                                                </tr>
+                                                                        </td>
+                                                                        <td>Guruable</td>
+                                                                        <td>Sep, 22</td>
+                                                                        <td class="text-right"><label class="label label-primary">high</label></td>
+                                                                    </tr>
                                                                 </tbody>
                                                             </table>
                                                             <div class="text-right m-r-20">
@@ -811,35 +359,35 @@
                                                     </div>
                                                     <div class="card-block">
                                                         <div class="align-middle m-b-30">
-                                                            <img src="resources/images/avatar-2.jpg" alt="user image" class="img-radius img-40 align-top m-r-15">
+                                                            <img src="/resources/images/avatar-2.jpg" alt="user image" class="img-radius img-40 align-top m-r-15">
                                                             <div class="d-inline-block">
                                                                 <h6>David Jones</h6>
                                                                 <p class="text-muted m-b-0">Developer</p>
                                                             </div>
                                                         </div>
                                                         <div class="align-middle m-b-30">
-                                                            <img src="resources/images/avatar-1.jpg" alt="user image" class="img-radius img-40 align-top m-r-15">
+                                                            <img src="/resources/images/avatar-1.jpg" alt="user image" class="img-radius img-40 align-top m-r-15">
                                                             <div class="d-inline-block">
                                                                 <h6>David Jones</h6>
                                                                 <p class="text-muted m-b-0">Developer</p>
                                                             </div>
                                                         </div>
                                                         <div class="align-middle m-b-30">
-                                                            <img src="resources/images/avatar-3.jpg" alt="user image" class="img-radius img-40 align-top m-r-15">
+                                                            <img src="/resources/images/avatar-3.jpg" alt="user image" class="img-radius img-40 align-top m-r-15">
                                                             <div class="d-inline-block">
                                                                 <h6>David Jones</h6>
                                                                 <p class="text-muted m-b-0">Developer</p>
                                                             </div>
                                                         </div>
                                                         <div class="align-middle m-b-30">
-                                                            <img src="resources/images/avatar-4.jpg" alt="user image" class="img-radius img-40 align-top m-r-15">
+                                                            <img src="/resources/images/avatar-4.jpg" alt="user image" class="img-radius img-40 align-top m-r-15">
                                                             <div class="d-inline-block">
                                                                 <h6>David Jones</h6>
                                                                 <p class="text-muted m-b-0">Developer</p>
                                                             </div>
                                                         </div>
                                                         <div class="align-middle m-b-10">
-                                                            <img src="resources/images/avatar-5.jpg" alt="user image" class="img-radius img-40 align-top m-r-15">
+                                                            <img src="/resources/images/avatar-5.jpg" alt="user image" class="img-radius img-40 align-top m-r-15">
                                                             <div class="d-inline-block">
                                                                 <h6>David Jones</h6>
                                                                 <p class="text-muted m-b-0">Developer</p>
@@ -852,93 +400,471 @@
                                                 </div>
                                             </div>
                                             <!--  project and team member end -->
-                                        </div>
-                                    </div>
-                                    <!-- Page-body end -->
-                                </div>
-                                <div id="styleSelector"> </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Warning Section Starts -->
-    <!-- Older IE warning message -->
-    <!--[if lt IE 10]>
-    <div class="ie-warning">
-        <h1>Warning!!</h1>
-        <p>You are using an outdated version of Internet Explorer, please upgrade <br/>to any of the following web browsers to access this website.</p>
-        <div class="iew-container">
-            <ul class="iew-download">
-                <li>
-                    <a href="http://www.google.com/chrome/">
-                        <img src="resources/images/browser/chrome.png" alt="Chrome">
-                        <div>Chrome</div>
-                    </a>
-                </li>
-                <li>
-                    <a href="https://www.mozilla.org/en-US/firefox/new/">
-                        <img src="resources/images/browser/firefox.png" alt="Firefox">
-                        <div>Firefox</div>
-                    </a>
-                </li>
-                <li>
-                    <a href="http://www.opera.com">
-                        <img src="resources/images/browser/opera.png" alt="Opera">
-                        <div>Opera</div>
-                    </a>
-                </li>
-                <li>
-                    <a href="https://www.apple.com/safari/">
-                        <img src="resources/images/browser/safari.png" alt="Safari">
-                        <div>Safari</div>
-                    </a>
-                </li>
-                <li>
-                    <a href="http://windows.microsoft.com/en-us/internet-explorer/download-ie">
-                        <img src="resources/images/browser/ie.png" alt="">
-                        <div>IE (9 & above)</div>
-                    </a>
-                </li>
-            </ul>
-        </div>
-        <p>Sorry for the inconvenience!</p>
-    </div>
-    <![endif]-->
-    <!-- Warning Section Ends -->
-    
-    <!-- Required Jquery -->
-    <script type="text/javascript" src="resources/js/jquery/jquery.min.js"></script>
-    <script type="text/javascript" src="resources/js/jquery-ui/jquery-ui.min.js "></script>
-    <script type="text/javascript" src="resources/js/popper.js/popper.min.js"></script>
-    <script type="text/javascript" src="resources/js/bootstrap/js/bootstrap.min.js "></script>
-    <script type="text/javascript" src="resources/pages/widget/excanvas.js "></script>
-    <!-- waves js -->
-    <script src="resources/pages/waves/js/waves.min.js"></script>
-    <!-- jquery slimscroll js -->
-    <script type="text/javascript" src="resources/js/jquery-slimscroll/jquery.slimscroll.js "></script>
-    <!-- modernizr js -->
-    <script type="text/javascript" src="resources/js/modernizr/modernizr.js "></script>
-    <!-- slimscroll js -->
-    <script type="text/javascript" src="resources/js/SmoothScroll.js"></script>
-    <script src="resources/js/jquery.mCustomScrollbar.concat.min.js "></script>
-    <!-- Chart js -->
-    <script type="text/javascript" src="resources/js/chart.js/Chart.js"></script>
-    <!-- amchart js -->
-    <script src="https://www.amcharts.com/lib/3/amcharts.js"></script>
-    <script src="resources/pages/widget/amchart/gauge.js"></script>
-    <script src="resources/pages/widget/amchart/serial.js"></script>
-    <script src="resources/pages/widget/amchart/light.js"></script>
-    <script src="resources/pages/widget/amchart/pie.min.js"></script>
-    <script src="https://www.amcharts.com/lib/3/plugins/export/export.min.js"></script>
-    <!-- menu js -->
-    <script src="resources/js/pcoded.min.js"></script>
-    <script src="resources/js/vertical-layout.min.js "></script>
-    <!-- custom js -->
-    <script type="text/javascript" src="resources/pages/dashboard/custom-dashboard.js"></script>
-    <script type="text/javascript" src="resources/js/script.js "></script>
-</body>
 
-</html>
+                                            <!--  whether order-visitor start -->
+                                            <div class="col-xl-6 col-md-12">
+                                                <div class="row">
+                                                    <div class="col-md-6">
+                                                        <div class="card text-center order-visitor-card">
+                                                            <div class="card-block">
+                                                                <h6 class="m-b-0">Total Subscription</h6>
+                                                                <h4 class="m-t-15 m-b-15"><i class="fa fa-arrow-down m-r-15 text-c-red"></i>7652</h4>
+                                                                <p class="m-b-0">48% From Last 24 Hours</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <div class="card text-center order-visitor-card">
+                                                            <div class="card-block">
+                                                                <h6 class="m-b-0">Order Status</h6>
+                                                                <h4 class="m-t-15 m-b-15"><i class="fa fa-arrow-up m-r-15 text-c-green"></i>6325</h4>
+                                                                <p class="m-b-0">36% From Last 6 Months</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <div class="card text-center order-visitor-card">
+                                                            <div class="card-block">
+                                                                <h6 class="m-b-0">Monthly Earnings</h6>
+                                                                <h4 class="m-t-15 m-b-15"><i class="fa fa-arrow-up m-r-15 text-c-green"></i>5963</h4>
+                                                                <p class="m-b-0">36% From Last 6 Months</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <div class="card text-center order-visitor-card">
+                                                            <div class="card-block">
+                                                                <h6 class="m-b-0">Unique Visitors</h6>
+                                                                <h4 class="m-t-15 m-b-15"><i class="fa fa-arrow-down m-r-15 text-c-red"></i>652</h4>
+                                                                <p class="m-b-0">36% From Last 6 Months</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <div class="card">
+                                                            <div class="card-block">
+                                                                <div class="row align-items-center m-l-0">
+                                                                    <div class="col-auto">
+                                                                        <i class="fa fa-user f-30 text-c-red"></i>
+                                                                    </div>
+                                                                    <div class="col-auto">
+                                                                        <h6 class="text-muted m-b-10">Happy Customers</h6>
+                                                                        <h2 class="m-b-0">5984</h2>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <div class="card">
+                                                            <div class="card-block">
+                                                                <div class="row align-items-center m-l-0">
+                                                                    <div class="col-auto">
+                                                                        <i class="fa fa-lightbulb-o f-30 text-c-blue"></i>
+                                                                    </div>
+                                                                    <div class="col-auto">
+                                                                        <h6 class="text-muted m-b-10">Unique Innovation</h6>
+                                                                        <h2 class="m-b-0">325</h2>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                            <div class="col-xl-3 col-md-6">
+                                                <div class="card wather-card">
+                                                    <div class="nature-card">
+                                                        <img src="/resources/images/widget/wathernature.png" alt="whether image" class="img-fluid main-img">
+                                                        <img src="/resources/images/widget/watherstar1.png" alt="whether image" class="snow1">
+                                                        <img src="/resources/images/widget/watherstar2.png" alt="whether image" class="snow2">
+                                                        <img src="/resources/images/widget/watherbottom.png" alt="whether image" class="bottom-img">
+                                                        <div class="nature-cont text-white">
+                                                            <h6>Snow</h6>
+                                                            <h2>-10Â°</h2>
+                                                            <h6>10:20 AM</h6>
+                                                        </div>
+                                                    </div>
+                                                    <div class="card-block">
+                                                        <div class="row text-c-blue">
+                                                            <div class="col">
+                                                                <h6>Sunday</h6></div>
+                                                            <div class="col text-right">-10Â°<i class="fa fa-snowflake-o m-l-20"></i></div>
+                                                        </div>
+                                                        <div class="row m-t-15">
+                                                            <div class="col">
+                                                                <h6>Monday</h6></div>
+                                                            <div class="col text-right">8Â°<i class="fa fa-cloud m-l-20"></i></div>
+                                                        </div>
+                                                        <div class="row m-t-15">
+                                                            <div class="col">
+                                                                <h6>Tuesday</h6></div>
+                                                            <div class="col text-right">20Â°<i class="fa fa-sun-o m-l-20"></i></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-xl-3 col-md-6">
+                                                <div class="card user-card">
+                                                    <div class="card-block text-center">
+                                                        <div class="usre-image">
+                                                            <img src="/resources/images/avatar-4.jpg" class="img-radius" alt="User-Profile-Image">
+                                                        </div>
+                                                        <h6 class="m-t-25 m-b-10">John Deo</h6>
+                                                        <p class="text-muted">Web Designer</p>
+                                                        <a href="#!" class="text-c-red d-block">websitename.com</a>
+                                                        <button class="btn btn-primary d-block">View Profile</button>
+                                                        <div class="row justify-content-center user-social-link m-b-25 p-t-10">
+                                                            <div class="col-auto"><a href="#!" data-toggle="tooltip" data-placement="bottom" title="facebook"><i class="fa fa-facebook text-facebook f-20"></i></a></div>
+                                                            <div class="col-auto"><a href="#!" data-toggle="tooltip" data-placement="bottom" title="twitter"><i class="fa fa-twitter text-twitter f-20"></i></a></div>
+                                                            <div class="col-auto"><a href="#!" data-toggle="tooltip" data-placement="bottom" title="dribbble"><i class="fa fa-dribbble text-dribbble f-20"></i></a></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!--  whether order-visitor end -->
+
+                                            <!--  project task start -->
+                                            <div class="col-xl-6 col-md-12">
+                                                <div class="card">
+                                                    <div class="card-header">
+                                                        <h5>To Do List</h5>
+                                                        <div class="card-header-right">
+                                                            <ul class="list-unstyled card-option">
+                                                                <li><i class="fa fa fa-wrench open-card-option"></i></li>
+                                                                <li><i class="fa fa-window-maximize full-card"></i></li>
+                                                                <li><i class="fa fa-minus minimize-card"></i></li>
+                                                                <li><i class="fa fa-refresh reload-card"></i></li>
+                                                                <li><i class="fa fa-trash close-card"></i></li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                    <div class="card-block widget-last-task">
+                                                        <div class="to-do-list">
+                                                            <div class="checkbox-fade fade-in-default">
+                                                                <label class="check-task">
+                                              <input type="checkbox" value="">
+                                              <span class="cr">
+                                                <i class="cr-icon fa fa-check txt-default"></i>
+                                              </span>
+                                              <span>Check your Email</span>
+                                            </label>
+                                                            </div>
+                                                            <div class="f-right">
+                                                                <a href="#!" class="delete_todolist"><i class="fa fa-trash"></i></a>
+                                                            </div>
+                                                        </div>
+                                                        <div class="to-do-list">
+                                                            <div class="checkbox-fade fade-in-default">
+                                                                <label class="check-task">
+                                              <input type="checkbox" value="">
+                                              <span class="cr">
+                                                <i class="cr-icon fa fa-check txt-default"></i>
+                                              </span>
+                                              <span>Make YouTube Video</span>
+                                            </label>
+                                                            </div>
+                                                            <div class="f-right">
+                                                                <a href="#!" class="delete_todolist"><i class="fa fa-trash"></i></a>
+                                                            </div>
+                                                        </div>
+                                                        <div class="to-do-list">
+                                                            <div class="checkbox-fade fade-in-default">
+                                                                <label class="check-task">
+                                              <input type="checkbox" value="">
+                                              <span class="cr">
+                                                <i class="cr-icon fa fa-check txt-default"></i>
+                                              </span>
+                                              <span>Create Banner</span>
+                                            </label>
+                                                            </div>
+                                                            <div class="f-right">
+                                                                <a href="#!" class="delete_todolist"><i class="fa fa-trash"></i></a>
+                                                            </div>
+                                                        </div>
+                                                        <div class="to-do-list">
+                                                            <div class="checkbox-fade fade-in-default">
+                                                                <label class="check-task">
+                                              <input type="checkbox" value="">
+                                              <span class="cr">
+                                                <i class="cr-icon fa fa-check txt-default"></i>
+                                              </span>
+                                              <span>Upload Project</span>
+                                            </label>
+                                                            </div>
+                                                            <div class="f-right">
+                                                                <a href="#!" class="delete_todolist"><i class="fa fa-trash"></i></a>
+                                                            </div>
+                                                        </div>
+                                                        <div class="right-icon-control">
+                                                            <form class="form-material">
+                                                                <div class="form-group form-primary">
+                                                                    <input type="text" name="footer-email" class="form-control" required="">
+                                                                    <span class="form-bar"></span>
+                                                                    <label class="float-label">Add Task</label>
+                                                                </div>
+                                                            </form>
+                                                            <div class="form-icon ">
+                                                                <button class="btn btn-primary btn-icon  waves-effect waves-light">
+                                              <i class="fa fa-plus"></i>
+                                            </button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-xl-3 col-md-6">
+                                                <div class="card">
+                                                    <div class="card-header">
+                                                        <h5>My Projects</h5>
+                                                        <div class="card-header-right">
+                                                            <ul class="list-unstyled card-option">
+                                                                <li><i class="fa fa fa-wrench open-card-option"></i></li>
+                                                                <li><i class="fa fa-window-maximize full-card"></i></li>
+                                                                <li><i class="fa fa-minus minimize-card"></i></li>
+                                                                <li><i class="fa fa-refresh reload-card"></i></li>
+                                                                <li><i class="fa fa-trash close-card"></i></li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                    <div class="card-block widget-last-task">
+                                                        <p class="m-b-10">New Dashboard <span class="f-right">5 Mins ago</span></p>
+                                                        <ul class="list-unstyled m-b-25">
+                                                            <li class="d-inline-block"><img src="/resources/images/avatar-5.jpg" alt="user-image" class="img-radius img-30 m-r-15" data-toggle="tooltip" data-placement="top" title="Tooltip on top"></li>
+                                                            <li class="d-inline-block"><img src="/resources/images/avatar-1.jpg" alt="user-image" class="img-radius img-30 m-r-15" data-toggle="tooltip" data-placement="top" title="Tooltip on top"></li>
+                                                            <li class="d-inline-block"><img src="/resources/images/avatar-2.jpg" alt="user-image" class="img-radius img-30 m-r-15" data-toggle="tooltip" data-placement="top" title="Tooltip on top"></li>
+                                                            <li class="d-inline-block"><img src="/resources/images/avatar-3.jpg" alt="user-image" class="img-radius img-30 m-r-15" data-toggle="tooltip" data-placement="top" title="Tooltip on top"></li>
+                                                        </ul>
+                                                        <p class="m-b-10 ">Web Design <span class="f-right">8 Mins ago</span></p>
+                                                        <ul class="list-unstyled  m-b-25">
+                                                            <li class="d-inline-block"><img src="/resources/images/avatar-5.jpg" alt="user-image" class="img-radius img-30 m-r-15" data-toggle="tooltip" data-placement="top" title="Tooltip on top"></li>
+                                                            <li class="d-inline-block"><img src="/resources/images/avatar-2.jpg" alt="user-image" class="img-radius img-30 m-r-15" data-toggle="tooltip" data-placement="top" title="Tooltip on top"></li>
+                                                            <li class="d-inline-block"><img src="/resources/images/avatar-3.jpg" alt="user-image" class="img-radius img-30 m-r-15" data-toggle="tooltip" data-placement="top" title="Tooltip on top"></li>
+                                                        </ul>
+                                                        <p class="m-b-10">Android Design <span class="f-right">12 Mins ago</span></p>
+                                                        <ul class="list-unstyled">
+                                                            <li class="d-inline-block"><img src="/resources/images/avatar-4.jpg" alt="user-image" class="img-radius img-30 m-r-15" data-toggle="tooltip" data-placement="top" title="Tooltip on top"></li>
+                                                            <li class="d-inline-block"><img src="/resources/images/avatar-2.jpg" alt="user-image" class="img-radius img-30 m-r-15" data-toggle="tooltip" data-placement="top" title="Tooltip on top"></li>
+                                                            <li class="d-inline-block"><img src="/resources/images/avatar-3.jpg" alt="user-image" class="img-radius img-30 m-r-15" data-toggle="tooltip" data-placement="top" title="Tooltip on top"></li>
+                                                        </ul>
+                                                        <div class="right-icon-control m-t-15">
+                                                            <form class="form-material">
+                                                                <div class="form-group form-primary">
+                                                                    <input type="text" name="footer-email" class="form-control" required="">
+                                                                    <span class="form-bar"></span>
+                                                                    <label class="float-label">Add Project</label>
+                                                                </div>
+                                                            </form>
+                                                            <div class="form-icon ">
+                                                                <button class="btn btn-primary btn-icon  waves-effect waves-light">
+                                              <i class="fa fa-plus"></i>
+                                            </button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-xl-3 col-md-6">
+                                                <div class="card trafic-card">
+                                                    <div class="card-header">
+                                                        <h5>Traffic Sources</h5>
+                                                        <div class="card-header-right">
+                                                            <ul class="list-unstyled card-option">
+                                                                <li><i class="fa fa fa-wrench open-card-option"></i></li>
+                                                                <li><i class="fa fa-window-maximize full-card"></i></li>
+                                                                <li><i class="fa fa-minus minimize-card"></i></li>
+                                                                <li><i class="fa fa-refresh reload-card"></i></li>
+                                                                <li><i class="fa fa-trash close-card"></i></li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                    <div class="card-block">
+                                                        <p class="m-b-10">Direct <span class="f-right"><i class="fa fa-caret-up m-r-10"></i>25%</span></p>
+                                                        <div class="progress blue">
+                                                            <div class="progress-bar bg-c-blue" style="width:75%"></div>
+                                                        </div>
+                                                        <p class="m-b-10 m-t-30">Social <span class="f-right"><i class="fa fa-caret-down m-r-10"></i>58</span></p>
+                                                        <div class="progress green">
+                                                            <div class="progress-bar bg-c-green" style="width:50%"></div>
+                                                        </div>
+                                                        <p class="m-b-10 m-t-30">Referral <span class="f-right"><i class="fa fa-caret-up m-r-10"></i>20%</span></p>
+                                                        <div class="progress red">
+                                                            <div class="progress-bar bg-c-red" style="width:20%"></div>
+                                                        </div>
+                                                        <p class="m-b-10 m-t-30">bounce <span class="f-right"><i class="fa fa-caret-down m-r-10"></i>580</span></p>
+                                                        <div class="progress yellow">
+                                                            <div class="progress-bar bg-c-yellow" style="width:40%"></div>
+                                                        </div>
+                                                        <p class="m-b-10 m-t-30">Internet <span class="f-right"><i class="fa fa-caret-up m-r-10"></i>70%</span></p>
+                                                        <div class="progress purple">
+                                                            <div class="progress-bar bg-c-purple" style="width:90%"></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!--  project task end -->
+
+                                            <!--  acttivity and feed start -->
+                                            <div class="col-xl-8 col-md-12">
+                                                <div class="card latest-activity-card">
+                                                    <div class="card-header">
+                                                        <h5>Latest Activity</h5>
+                                                        <div class="card-header-right">
+                                                            <ul class="list-unstyled card-option">
+                                                                <li><i class="fa fa fa-wrench open-card-option"></i></li>
+                                                                <li><i class="fa fa-window-maximize full-card"></i></li>
+                                                                <li><i class="fa fa-minus minimize-card"></i></li>
+                                                                <li><i class="fa fa-refresh reload-card"></i></li>
+                                                                <li><i class="fa fa-trash close-card"></i></li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                    <div class="card-block">
+                                                        <div class="latest-update-box">
+                                                            <div class="row p-t-20 p-b-30">
+                                                                <div class="col-auto text-right update-meta">
+                                                                    <p class="text-muted m-b-0 d-inline">just now</p>
+                                                                    <i class="fa fa-fighter-jet bg-c-blue update-icon"></i>
+                                                                </div>
+                                                                <div class="col">
+                                                                    <h6>John Deo</h6>
+                                                                    <p class="text-muted m-b-15">The trip was an amazing and a life changing experience!!</p>
+                                                                    <img src="/resources/images/mega-menu/01.jpg" alt="" class="img-fluid img-100 m-r-15 m-b-10">
+                                                                    <img src="/resources/images/mega-menu/03.jpg" alt="" class="img-fluid img-100 m-r-15 m-b-10">
+                                                                </div>
+                                                            </div>
+                                                            <div class="row p-b-30">
+                                                                <div class="col-auto text-right update-meta">
+                                                                    <p class="text-muted m-b-0 d-inline">5 min ago</p>
+                                                                    <i class="fa fa-file-text bg-c-blue update-icon"></i>
+                                                                </div>
+                                                                <div class="col">
+                                                                    <h6>Administrator</h6>
+                                                                    <p class="text-muted m-b-0">Free courses for all our customers at A1 Conference Room - 9:00 am tomorrow!</p>
+                                                                </div>
+                                                            </div>
+                                                            <div class="row p-b-30">
+                                                                <div class="col-auto text-right update-meta">
+                                                                    <p class="text-muted m-b-0 d-inline">3 hours ago</p>
+                                                                    <i class="fa fa-map-marker bg-c-blue update-icon"></i>
+                                                                </div>
+                                                                <div class="col">
+                                                                    <h6>Jeny William</h6>
+                                                                    <p class="text-muted m-b-15">Happy Hour! Free drinks at <span class="text-c-blue"><a href="#!" class="text-c-blue">Cafe-Bar all</a>  </span>day long!</p>
+                                                                    <div id="markers-map" style="height:200px;width:100%"></div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="text-right">
+                                                            <a href="#!" class=" b-b-primary text-primary">View all Activity</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-xl-4 col-md-12">
+                                                <div class="card feed-card">
+                                                    <div class="card-header">
+                                                        <h5>Feeds</h5>
+                                                        <div class="card-header-right">
+                                                            <ul class="list-unstyled card-option">
+                                                                <li><i class="fa fa fa-wrench open-card-option"></i></li>
+                                                                <li><i class="fa fa-window-maximize full-card"></i></li>
+                                                                <li><i class="fa fa-minus minimize-card"></i></li>
+                                                                <li><i class="fa fa-refresh reload-card"></i></li>
+                                                                <li><i class="fa fa-trash close-card"></i></li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                    <div class="card-block">
+                                                        <div class="row m-b-30">
+                                                            <div class="col-auto p-r-0">
+                                                                <i class="fa fa-bell bg-c-blue feed-icon"></i>
+                                                            </div>
+                                                            <div class="col">
+                                                                <h6 class="m-b-5">You have 3 pending tasks. <span class="text-muted f-right f-13">Just Now</span></h6>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row m-b-30">
+                                                            <div class="col-auto p-r-0">
+                                                                <i class="fa fa-shopping-cart bg-c-red feed-icon"></i>
+                                                            </div>
+                                                            <div class="col">
+                                                                <h6 class="m-b-5">New order received <span class="text-muted f-right f-13">Just Now</span></h6>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row m-b-30">
+                                                            <div class="col-auto p-r-0">
+                                                                <i class="fa fa-file-text bg-c-green feed-icon"></i>
+                                                            </div>
+                                                            <div class="col">
+                                                                <h6 class="m-b-5">You have 3 pending tasks. <span class="text-muted f-right f-13">Just Now</span></h6>
+                                                            </div>
+                                                        </div>
+                                                        <div class="text-center">
+                                                            <a href="#!" class="b-b-primary text-primary">View all Feeds</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="card feed-card">
+                                                    <div class="card-header">
+                                                        <h5>Upcoming Deadlines</h5>
+                                                        <div class="card-header-right">
+                                                            <ul class="list-unstyled card-option">
+                                                                <li><i class="fa fa fa-wrench open-card-option"></i></li>
+                                                                <li><i class="fa fa-window-maximize full-card"></i></li>
+                                                                <li><i class="fa fa-minus minimize-card"></i></li>
+                                                                <li><i class="fa fa-refresh reload-card"></i></li>
+                                                                <li><i class="fa fa-trash close-card"></i></li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                    <div class="card-block">
+                                                        <div class="row m-b-25">
+                                                            <div class="col-auto p-r-0">
+                                                                <img src="/resources/images/mega-menu/01.jpg" alt="" class="img-fluid img-50">
+                                                            </div>
+                                                            <div class="col">
+                                                                <h6 class="m-b-5">New able - Redesign</h6>
+                                                                <p class="text-c-red m-b-0">2 Days Remaining</p>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row m-b-25">
+                                                            <div class="col-auto p-r-0">
+                                                                <img src="/resources/images/mega-menu/02.jpg" alt="" class="img-fluid img-50">
+                                                            </div>
+                                                            <div class="col">
+                                                                <h6 class="m-b-5">New Admin Dashboard</h6>
+                                                                <p class="text-c-red m-b-0">Proposal in 6 Days</p>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row m-b-25">
+                                                            <div class="col-auto p-r-0">
+                                                                <img src="/resources/images/mega-menu/03.jpg" alt="" class="img-fluid img-50">
+                                                            </div>
+                                                            <div class="col">
+                                                                <h6 class="m-b-5">Logo Design</h6>
+                                                                <p class="text-c-green m-b-0">10 Days Remaining</p>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="text-center">
+                                                            <a href="#!" class="b-b-primary text-primary">View all Feeds</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+	</div>
+                                            <!--  acttivity and feed end -->
+</div>
+<!-- Row end -->
+</div>
+<!-- Page-body end -->
+</div>
+<div id="styleSelector"> </div>
+</div>
+<!-- Main-body end -->
+</div>
+<!-- pcoded-inner-content end -->
+
+</div>
+<%@include file="./include/footer.jsp" %>

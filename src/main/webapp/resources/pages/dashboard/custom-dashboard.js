@@ -4,7 +4,6 @@ $(document).ready(function() {
     var chart = AmCharts.makeChart( "sales-analytics", {
         "type": "serial",
         "theme": "light",
-        // "hideCredits": true,
         "marginRight": 40,
         "marginLeft": 40,
         "autoMarginOffset": 20,
@@ -721,5 +720,21 @@ $(document).ready(function() {
     }
     // sale analytics end
 
+    var map;
+    map = new GMaps({
+        el: '#markers-map',
+        lat: 21.2334329,
+        lng: 72.866472,
+        scrollwheel: false
+    });
+
+    map.addMarker({
+        lat: 21.2334329,
+        lng: 72.866472,
+        title: 'Marker with InfoWindow',
+        infoWindow: {
+            content: '<p><Phoenicoded></Phoenicoded> <br/> Buy Now at <a href="">Themeforest</a></p>'
+        }
+    });
 
 });

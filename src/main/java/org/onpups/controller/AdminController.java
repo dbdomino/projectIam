@@ -19,36 +19,30 @@ import lombok.extern.log4j.Log4j;
 
 @Controller
 @Log4j
-@RequestMapping("/main/*")
+@RequestMapping("/admin/*")
 @RequiredArgsConstructor     // 이게있어야 서비스 final로 선언시 impl 과 연결시켜 자동매핑 
-public class MainController {
+public class AdminController {
 	private final SampleService sampleService;
 	
-	@GetMapping("/quest")	
-	public String quest(Model model) {
-		log.info("open quest");
+	@GetMapping("/admboards")	
+	public String admboards(Model model) {
+		log.info("open admboards");
 		model.addAttribute("zozo", sampleService.view(6));
 		
-		return "/main/quest";
+		return "/admin/admboards";
 	}
-	@GetMapping("sign-in")	
-	public void sign1() { 
-		log.info("open sign-in");
+	@GetMapping("admcontents")	
+	public void admcontents() { 
+		log.info("admcontents");
 	}
-	@GetMapping("sign-up")	
+	@GetMapping("admusers")	
 	public void sign2() { 
 		log.info("open sign-up");
 	}
-	@GetMapping("password-reset")	
+	
+	@GetMapping("admwords")	
 	public void passwordReset() { 
-		log.info("password-reset");
+		log.info("admwords");
 	}
-	@GetMapping("ckinfo")	
-	public void ckinfo() { 
-		log.info("ckinfo");
-	}
-	@GetMapping("openinfo")	
-	public void openinfo() { 
-		log.info("openinfo");
-	}
+	
 }

@@ -19,36 +19,40 @@ import lombok.extern.log4j.Log4j;
 
 @Controller
 @Log4j
-@RequestMapping("/main/*")
+@RequestMapping("/dmake/*")
 @RequiredArgsConstructor     // 이게있어야 서비스 final로 선언시 impl 과 연결시켜 자동매핑 
-public class MainController {
+public class DmakeController {
 	private final SampleService sampleService;
 	
-	@GetMapping("/quest")	
-	public String quest(Model model) {
-		log.info("open quest");
+	@GetMapping("/home")	
+	public String home(Model model) {
+		log.info("open dmake home");
 		model.addAttribute("zozo", sampleService.view(6));
 		
-		return "/main/quest";
+		return "/dmake/home";
 	}
-	@GetMapping("sign-in")	
-	public void sign1() { 
-		log.info("open sign-in");
+	@GetMapping("qlist")	
+	public void qlist() { 
+		log.info("open qlist");
 	}
-	@GetMapping("sign-up")	
-	public void sign2() { 
-		log.info("open sign-up");
+	@GetMapping("chkmain")	
+	public void chkmain() { 
+		log.info("open chkmain");
 	}
-	@GetMapping("password-reset")	
-	public void passwordReset() { 
-		log.info("password-reset");
+	@GetMapping("chkmine")	
+	public void chkmine() { 
+		log.info("chkmine");
 	}
-	@GetMapping("ckinfo")	
-	public void ckinfo() { 
-		log.info("ckinfo");
+	@GetMapping("emotion")	
+	public void emotion() { 
+		log.info("emotion");
 	}
-	@GetMapping("openinfo")	
-	public void openinfo() { 
-		log.info("openinfo");
+	@GetMapping("dstress")	
+	public void dstress() { 
+		log.info("dstress");
+	}
+	@GetMapping("habit")	
+	public void habit() { 
+		log.info("habit");
 	}
 }

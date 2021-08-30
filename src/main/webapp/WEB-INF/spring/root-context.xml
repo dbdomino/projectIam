@@ -58,7 +58,7 @@
 		<property name="jdbcUrl" value="jdbc:mariadb://www.onpups.pe.kr:3306/onpups"></property>
 		<property name="username" value="bae">
 		</property>
-		<property name="password" value="gkgkgkgk">
+		<property name="password" value="1q2w3e4r">
 		</property>
 	</bean>
 

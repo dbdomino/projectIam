@@ -12,7 +12,7 @@
 				<div class="col-md-8">
 					<div class="page-header-title">
 						<h5 class="m-b-10">Dashboard</h5>
-						<p class="m-b-0">Welcome to Mega Able</p>
+						<p class="m-b-0">${zozo.cumd1}</p>
 					</div>
 				</div>
 				<div class="col-md-4">
@@ -28,6 +28,14 @@
 		</div>
 	</div>
 <!-- Page-header end -->
+	<div>
+		cum = ${zozo.cumd2}
+		
+	</div>
+	<div>
+		num = ${zozo.numd1}
+	</div>
+
 <!-- pcoded-inner-content start -->
 <div class="pcoded-inner-content">
 <!-- Main-body start -->

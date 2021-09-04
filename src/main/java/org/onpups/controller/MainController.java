@@ -31,13 +31,17 @@ public class MainController {
 		
 		return "/main/quest";
 	}
-	@GetMapping("sign-in")	
-	public void sign1() { 
-		log.info("open sign-in");
-	}
-	@GetMapping("sign-up")	
-	public void sign2() { 
-		log.info("open sign-up");
+//	@GetMapping("sign-in")	
+//	public void sign1() { 
+//		log.info("open sign-in");
+//	}
+//	@GetMapping("sign-up")	
+//	public void sign2() { 
+//		log.info("open sign-up");
+//	}
+	@GetMapping("sign-up-complete")	
+	public void sign3() { 
+		log.info("open sign-up-complete");
 	}
 	@GetMapping("password-reset")	
 	public void passwordReset() { 

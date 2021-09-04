@@ -2,31 +2,43 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="org.onpups.mapper.UserMapper">
 	<insert id="create">
-		insert into table_user (id, email, password)
-		values (#{cumd1}, #{cumd2}, #{numd1})
+		insert into table_user (id, nick, email, regDate, password)
+		values (#{id}, #{nick}, #{email}, CURRENT_TIMESTAMP(), #{password})
 	</insert>
 	
 	<select id="read" resultType="org.onpups.domain.TableUserVO">
-		select num, id, email, regDate, password from table_user where id = #{id}
+		select num, id, nick, email, regDate, password from table_user where num = #{num}
+	</select>
+	<select id="readId" resultType="org.onpups.domain.TableUserVO">
+		select num, id, nick, email, regDate, password from table_user where id = #{id}
+	</select>
+	
+	<select id="idcheck" resultType="String">
+		select id from table_user where id = #{id}
+	</select>
+	<select id="loginCheck" resultType="org.onpups.domain.TableUserVO">
+		select id, password from table_user where id = #{id}
 	</select>
 	
 	<update id="update">
-		update tbl_board set
-		 title= #{title},
-		 content=#{content},
-		 writer=#{writer},
-		 upregdate=sysdate
-		 where bno=#{bno}
+		update table_user set
+			<if test="nick != null">
+				nick = #{nick},
+			</if>
+			<if test="email != null">
+				email = #{email},
+			</if>
+			<if test="password != null">
+				password= #{password},
+			</if>
+			
+			regDate = CURRENT_TIMESTAMP
+		where num=#{num}
 	</update>
 	<update id="delete">
-		update tbl_board set
-		 title= #{title},
-		 content=#{content},
-		 writer=#{writer},
-		 upregdate=sysdate
-		 where bno=#{bno}
+		update table_user set
+			isDel = 'Y',
+			delDate = CURRENT_TIMESTAMP
+		where num=#{num}
 	</update>
-	
-	
-	
 </mapper>

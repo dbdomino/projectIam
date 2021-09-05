@@ -2,13 +2,13 @@
 <beans xmlns="http://www.springframework.org/schema/beans"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xmlns:security="http://www.springframework.org/schema/security"
-	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
-		http://www.springframework.org/schema/security http://www.springframework.org/schema/security/spring-security.xsd">
+	xsi:schemaLocation="http://www.springframework.org/schema/security https://www.springframework.org/schema/security/spring-security.xsd
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
 <bean id="customAccessDenied" class="org.onpups.security.CustomAccessDeniedHandler"></bean>
 <bean id="customLoginSuccess" class="org.onpups.security.CustomLoginSuccessHandler"></bean>
-<!-- <bean id="CustomPasswordEncoder" class="org.zerock.security.CustomNoOpPasswordEncoder"></bean> -->
-<bean id="customUserDetailsService" class="org.onpups.security.CustomUserDetailsService"></bean>
+<bean id="CustomPasswordEncoder" class="org.onpups.security.CustomNoOpPasswordEncoder"></bean>
+<!-- <bean id="customUserDetailsService" class="org.onpups.security.CustomUserDetailsService"></bean> -->
 
 <bean id="bcryptPasswordEncoder" class="org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder" />
 
@@ -42,10 +42,10 @@
 	<!--  <security:authentication-provider user-service-ref="customUserDetailsService"> -->
 	<security:authentication-provider>
 		<!--  <security:jdbc-user-service data-source-ref="dataSource" /> -->
-		<security:jdbc-user-service data-source-ref="dataSource" users-by-username-query="select id, password from table_user where id = ? and isDel='N'" authorities-by-username-query="select id, auth from table_user_auth where id = ? " />
-		
-		<!--  <security:password-encoder ref="CustomPasswordEncoder" /> -->
-		<security:password-encoder ref="bcryptPasswordEncoder" />
+		<security:jdbc-user-service data-source-ref="dataSource" users-by-username-query="select id, password, enabled from table_user where id = ? and isDel='N'" authorities-by-username-query="select id, auth from table_user_auth where id = ? " />
+
+		<security:password-encoder ref="CustomPasswordEncoder" />
+		<!-- <security:password-encoder ref="bcryptPasswordEncoder" /> -->
 		
 		
 	</security:authentication-provider>

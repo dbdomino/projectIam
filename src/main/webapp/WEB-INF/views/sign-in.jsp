@@ -17,7 +17,7 @@
                                 <div class="card-block">
 
                                     <div class="form-group form-primary">
-                                        <input type="text" name="id" class="form-control" required="">
+                                        <input type="text" name="username" class="form-control" required="">
                                         <span class="form-bar"></span>
                                         <label class="float-label">ID 입력</label>
                                     </div>
@@ -25,6 +25,7 @@
                                         <input type="password" name="password" class="form-control" required="">
                                         <span class="form-bar"></span>
                                         <label class="float-label">PW 입력</label>
+                                        <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
                                     </div>
                                     <div class="row m-t-25 text-left">
                                         <div class="col-12">
@@ -51,14 +52,14 @@
                                         	  
                                         </div>
                                     </div>
-                                    <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
+                                    
                                     <hr/>
                                     <div class="row">
                                         <div class="col-md-10">
                                             <p class="text-inverse text-left m-b-0">오늘도 힘차게!</p>
                                             <p class="text-inverse text-left"><a href="home"><b>웹사이트 보기</b></a></p>
                                         </div>
-                                        <div class="col-md-10">
+                                        <div class="col-md-2">
                                             <img src="/resources/images/auth/Logo-small-bottom.png" alt="small-logo.png">
                                         </div>
                                     </div>

@@ -54,16 +54,17 @@ public class CommonController {
 	
 	@GetMapping("/sign-in")
 	public void loginInput(String error, String logout, Model model) {
-		log.info("error loginInput: "+error);
-		log.info("logout: "+logout);
+		
+		log.info("------------------------sign-in: page");
+		log.info("---check error : "+error + ", logout : "+logout);
 		
 		if (error != null) {
 			model.addAttribute("error", "Login Error Check YOur Account");
-			
+			log.info("-------error occur: "+error);
 		}
 		if (logout != null) {
 			model.addAttribute("logout", "Login out");
-			
+			log.info("-------logout occur: "+logout);
 		}
 	}
 	

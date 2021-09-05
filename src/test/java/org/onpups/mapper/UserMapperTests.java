@@ -56,7 +56,7 @@ public class UserMapperTests {
 		log.info(vo);
 	}
 	
-//	@Test
+	@Test
 	public void testRead() {
 		log.info("board_before: ----------------");
 //		Mapper1.read(3);
@@ -75,7 +75,7 @@ public class UserMapperTests {
 			log.info("------------------------check no");
 		}
 	}
-	@Test
+//	@Test
 	public void loginCheck() {
 //		TableUserVO vo = new TableUserVO();
 //		vo.setId("user01");

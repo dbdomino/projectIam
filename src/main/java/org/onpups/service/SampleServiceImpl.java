@@ -13,8 +13,7 @@ import lombok.extern.log4j.Log4j;
 public class SampleServiceImpl implements SampleService{
 	@Setter(onMethod_ = @Autowired)
 	private Sample1Mapper mapper;
-	@Autowired
-	private Sample1Mapper Mapper1;
+
 
 
 	@Override

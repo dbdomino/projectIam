@@ -25,13 +25,13 @@
                                         <input type="password" name="password" class="form-control" required="">
                                         <span class="form-bar"></span>
                                         <label class="float-label">PW 입력</label>
-                                        <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
+                                        
                                     </div>
                                     <div class="row m-t-25 text-left">
                                         <div class="col-12">
                                             <div class="checkbox-fade fade-in-primary d-">
                                                 <label>
-                                                    <input type="checkbox" name="remember" value="" >
+                                                    <input type="checkbox" name="remember-me" >
                                                     <span class="cr"><i class="cr-icon icofont icofont-ui-check txt-primary"></i></span>
                                                     <span class="text-inverse">로그인 상태유지</span>
                                                 </label>
@@ -41,6 +41,7 @@
                                             </div>
                                         </div>
                                     </div>
+                                    <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
                                     <div class="row m-t-30">
                                         <div class="col-md-12">
                                             <button type="button" class="btn btn-primary btn-md btn-block waves-effect waves-light text-center" onclick="submitForm()">로그인</button>

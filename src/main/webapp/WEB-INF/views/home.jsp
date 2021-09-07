@@ -53,7 +53,7 @@
 </div>
 <!-- Page-body end -->
 </div>
-<div id="styleSelector"> </div>
+
 </div>
 <!-- Main-body end -->
 </div>

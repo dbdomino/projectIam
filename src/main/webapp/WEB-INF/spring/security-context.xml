@@ -8,9 +8,9 @@
 <bean id="customAccessDenied" class="org.onpups.security.CustomAccessDeniedHandler"></bean>
 <bean id="customLoginSuccess" class="org.onpups.security.CustomLoginSuccessHandler"></bean>
 <bean id="CustomPasswordEncoder" class="org.onpups.security.CustomNoOpPasswordEncoder"></bean>
-<!-- <bean id="customUserDetailsService" class="org.onpups.security.CustomUserDetailsService"></bean> -->
+<bean id="customUserDetailsService" class="org.onpups.security.CustomUserDetailsService"></bean>
 
-<bean id="bcryptPasswordEncoder" class="org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder" />
+<!-- <bean id="bcryptPasswordEncoder" class="org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder" /> -->
 
 <security:http auto-config="true" use-expressions="true">
 	<security:intercept-url pattern="/**" access="permitAll"></security:intercept-url>
@@ -26,9 +26,10 @@
 	<security:access-denied-handler ref="customAccessDenied"/>
 	
 	<!-- <security:form-login login-page="/customLogin" authentication-success-handler-ref="customLoginSuccess"></security:form-login> --><!-- loginSuccessHandler 사용하는 authentication-success-handler-ref속성 이용 -->
-	<security:form-login login-page="/sign-in"></security:form-login><!-- SavedRequestAwareAuthenticationSuccessHandler 이용위해 authentication-success-handler-ref속성 삭제 -->
+	<security:form-login login-page="/sign-in" authentication-success-handler-ref="customLoginSuccess"></security:form-login><!-- SavedRequestAwareAuthenticationSuccessHandler 이용위해 authentication-success-handler-ref속성 삭제 -->
 	
-	<security:remember-me data-source-ref="dataSource" token-validity-seconds="604800" /> <!-- 자동로그인 -->
+	<!--  <security:remember-me data-source-ref="dataSource" remember-me-parameter="remember-me" remember-me-cookie="remember-me" token-validity-seconds="604800" authentication-success-handler-ref="customLoginSuccess" /> -->
+	<security:remember-me key="wmoskey" token-validity-seconds="604800" />
 	
 	<!-- <security:logout logout-url="/customLogout" invalidate-session="true"/> --> <!-- 이거 역할이 크네 이거 -->
 	<!-- <security:logout logout-url="/logout" invalidate-session="true" delete-cookies="remember-me, JSESSION_ID" /> --> <!-- delete-cookies로 로그아웃시 쿠키 삭제 -->
@@ -39,10 +40,12 @@
 </security:http>
 
 <security:authentication-manager>
-	<!--  <security:authentication-provider user-service-ref="customUserDetailsService"> -->
-	<security:authentication-provider>
+
+	<!-- <security:authentication-provider> -->
+	<security:authentication-provider user-service-ref="customUserDetailsService"> 
+
 		<!--  <security:jdbc-user-service data-source-ref="dataSource" /> -->
-		<security:jdbc-user-service data-source-ref="dataSource" users-by-username-query="select id, password, enabled from table_user where id = ? and isDel='N'" authorities-by-username-query="select id, auth from table_user_auth where id = ? " />
+		<!--  <security:jdbc-user-service data-source-ref="dataSource" users-by-username-query="select id, password, enabled from table_user where id = ? and isDel='N'" authorities-by-username-query="select id, auth from table_user_auth where id = ? " /> -->
 
 		<security:password-encoder ref="CustomPasswordEncoder" />
 		<!-- <security:password-encoder ref="bcryptPasswordEncoder" /> -->

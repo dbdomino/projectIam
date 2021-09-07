@@ -56,13 +56,22 @@ public class UserMapperTests {
 		log.info(vo);
 	}
 	
-	@Test
+//	@Test
 	public void testRead() {
 		log.info("board_before: ----------------");
 //		Mapper1.read(3);
 		log.info(Mapper1.read(3));
 		log.info(Mapper1.readId("user02"));
 	}
+	
+	@Test
+	public void testReadMap() {
+		TableUserVO vo = Mapper1.readMap("masaru");
+		log.info("--------------------------------ReadMap vo");
+		log.info(vo);
+		vo.getAuthList().forEach(i -> log.info(i));
+	}
+	
 //	@Test
 	public void testIdcheck() {
 		String tmp = Mapper1.idcheck("user01");

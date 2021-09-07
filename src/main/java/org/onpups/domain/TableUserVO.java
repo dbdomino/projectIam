@@ -12,10 +12,12 @@ public class TableUserVO {
 	private String nick;
 	private String email;
 	private Date regDate;
+	private Date upregDate;
 	private String isDel;
 	private Date delDate;
 	private String password;
-	private List<AuthVO> authList;
+	private String enabled;
+	private List<TableUserAuthVO> authList;
 	
 	
 }

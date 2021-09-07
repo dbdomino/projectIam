@@ -39,6 +39,10 @@ public class MainController {
 //	public void sign2() { 
 //		log.info("open sign-up");
 //	}
+	@GetMapping("all2")	
+	public void all2() { 
+		log.info("open all2.jsp");
+	}
 	@GetMapping("sign-up-complete")	
 	public void sign3() { 
 		log.info("open sign-up-complete");

@@ -1,6 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="org.onpups.mapper.UserMapper">
+	<resultMap type="org.onpups.domain.TableUserVO" id="userMap">
+		<id property="id" column="id"/>
+		<result property="id" column="id"/>
+		<result property="password" column="password"/>
+		<result property="nick" column="nick"/>
+		<result property="email" column="email"/>
+		<result property="regDate" column="regDate"/>
+		<result property="upregDate" column="upregDate"/>
+		<collection property="authList" resultMap="authMap"></collection>	
+	</resultMap>
+	<resultMap type="org.onpups.domain.TableUserAuthVO" id="authMap">
+		<result property="id" column="id"/>
+		<result property="auth" column="auth"/>
+	</resultMap>
+
 	<insert id="create">
 		insert into table_user (id, nick, email, regDate, password)
 		values (#{id}, #{nick}, #{email}, CURRENT_TIMESTAMP(), #{password})
@@ -11,6 +26,11 @@
 	</select>
 	<select id="readId" resultType="org.onpups.domain.TableUserVO">
 		select num, id, nick, email, regDate, password from table_user where id = #{id}
+	</select>
+	<select id="readMap" resultMap="userMap">
+		select mem.id, password, nick, email, enabled, regDate, upregDate, auth 
+		from table_user mem LEFT OUTER JOIN table_user_auth auth on mem.id=auth.id 
+		where mem.id = #{id}
 	</select>
 	
 	<select id="idcheck" resultType="String">

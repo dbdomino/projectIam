@@ -17,6 +17,7 @@ public class TableUserVO {
 	private Date delDate;
 	private String password;
 	private String enabled;
+	private String profileImage;
 	private List<TableUserAuthVO> authList;
 	
 	

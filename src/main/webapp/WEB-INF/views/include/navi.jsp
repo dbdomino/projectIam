@@ -1,4 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ taglib uri="http://www.springframework.org/security/tags" prefix="sec" %>
             <nav class="navbar header-navbar pcoded-header">
                 <div class="navbar-wrapper">
@@ -104,19 +105,19 @@
 </sec:authorize>
 <sec:authorize access="isAuthenticated()">
 	<a href="#!" class="waves-effect waves-light pdp">
-	<img src="/resources/images/avatar-4.jpg" class="img-radius" alt="User-Profile-Image">
-	<span>John Doe</span>
+	<img src="/resources/upload/profile/<sec:authentication property="principal.user.profileImage"/>" class="img-radius" alt="User-Profile-Image">
+	<span><sec:authentication property="principal.user.nick"/></span>
 	<i class="ti-angle-down"></i>
 	</a>
 	<ul class="show-notification profile-notification">
 		
 		<li class="waves-effect waves-light">
-			<a href="user-profile.html">
+			<a href="/main/profile">
 			<i class="ti-user"></i> 프로필 설정
 			</a>
 		</li>
 		<li class="waves-effect waves-light">
-			<a href="#!">
+			<a href="/main/question">
 			<i class="ti-email"></i> 문의하기
 			</a>
 		</li>

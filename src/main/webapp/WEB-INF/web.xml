@@ -27,14 +27,10 @@
 			<param-name>throwExceptionIfNoHandlerFound</param-name>
 			<param-value>true</param-value>
 		</init-param>
-		
-		<multipart-config>
-			<location>/resources/upload/many/</location>
-			<max-file-size>20971520</max-file-size> <!-- 업로드 파일 최대 크기 1MB*20 -->
-			<max-request-size>41943040</max-request-size> <!-- 한번에 올릴 수 있는 최대크기 1MB*40 -->
-			<file-size-threshold>20971520</file-size-threshold><!-- 특정 사이즈의 메모리 사용 1MB*20 --> 
-		</multipart-config>
 		<load-on-startup>1</load-on-startup>
+		
+		
+		
 	</servlet>
 		
 

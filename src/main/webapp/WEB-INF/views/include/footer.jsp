@@ -7,7 +7,7 @@
 </div>
 
 <!-- Required Jquery -->
-    <script type="text/javascript" src="/resources/js/base/jquery.min.js "></script>
+    
     <script type="text/javascript" src="/resources/js/base/jquery-ui.min.js "></script>
     <script type="text/javascript" src="/resources/js/base/popper.min.js"></script>
     <script type="text/javascript" src="/resources/js/base/bootstrap.min.js "></script>
@@ -44,6 +44,9 @@
     <!-- custom js -->
     <script type="text/javascript" src="/resources/pages/dashboard/custom-dashboard.js"></script>
     <script type="text/javascript" src="/resources/js/base/script.js "></script>
+    <script type="text/javascript" src="/resources/js/base/custompups.js "></script>
+    
+
 </body>
 
 </html>

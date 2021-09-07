@@ -5,12 +5,14 @@
 	<div class="sidebar_toggle"><a href="#"><i class="icon-close icons"></i></a></div>
 	<div class="pcoded-inner-navbar main-menu">
                             <div class="">
+                            	<sec:authorize access="isAuthenticated()">
                                 <div class="main-menu-header">
-                                    <img class="img-80 img-radius" src="/resources/images/avatar-4.jpg" alt="User-Profile-Image">
+                                    <img class="img-80 img-radius" src="/resources/upload/profile/<sec:authentication property="principal.user.profileImage"/>" alt="User-Profile-Image">
                                     <div class="user-details">
-                                        <span id="more-details">John Doe<i class="fa fa-caret-down"></i></span>
+                                        <span id="more-details"><sec:authentication property="principal.user.nick"/><i class="fa fa-caret-down"></i></span>
                                     </div>
                                 </div>
+                                </sec:authorize>
 
                                 <div class="main-menu-content">
                                     <ul>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.onpups.mapper.AttachMapper">
+	<insert id="insert">
+		insert into attachFile (uuid, uploadpath, filename, newfilename, filetype, category) values (#{uuid}, #{uploadPath}, #{filename}, #{newfilename},#{fileType}, #{category})
+	</insert>
+	
+	<delete id="delete">
+		delete from attachFile where uuid = #{uuid}
+	</delete>
+	
+	
+	<delete id="delete2">
+		delete from attachFile where newfilename = #{newfilename}
+	</delete>
+	
+	<select id="getOldFiles" resultType="org.onpups.domain.AttachVO">
+		select * from attachFile where uploadpath = to_char(sysdate -1, 'yyyy\mm\dd')
+	</select>
+</mapper>

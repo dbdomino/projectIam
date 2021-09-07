@@ -25,6 +25,10 @@
     <link rel="stylesheet" type="text/css" href="/resources/css/themify-icons.css">
     <!-- Font Awesome -->
     <link rel="stylesheet" type="text/css" href="/resources/css/font-awesome.min.css">
+    <!-- ico font -->
+	<link rel="stylesheet" type="text/css" href="/resources/css/icofont.css">
+	<!-- themify icon -->
+	<link rel="stylesheet" type="text/css" href="/resources/css/themify-icons.css">
     <!-- scrollbar.css -->
     <link rel="stylesheet" type="text/css" href="/resources/css/jquery.mCustomScrollbar.css">
     <!-- am chart export.css -->
@@ -33,7 +37,7 @@
     <link rel="stylesheet" type="text/css" href="/resources/css/radial.css"  media="all">
     <!-- Style.css -->
     <link rel="stylesheet" type="text/css" href="/resources/css/style.css">
-
+<script type="text/javascript" src="/resources/js/base/jquery.min.js "></script>
 </head>
 <body>
 

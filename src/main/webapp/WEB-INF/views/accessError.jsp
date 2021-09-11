@@ -15,7 +15,7 @@
 
 </head>
 <body>
-<h1>access Error</h1>
+<h1>access ErrorB</h1>
 <h2><c:out value="${SPRING_SECURITY_403_EXCEPTION.getMessage()}" /></h2>
 
 <h3><c:out value="${msg}"/></h3>
@@ -29,7 +29,7 @@
 		}
 		%>
 
-	
+	  
 
 </body>
 
